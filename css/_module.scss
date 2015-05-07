@@ -1,13 +1,15 @@
 /* Module.scss */
 
 body {
+    @include body-font;
     background-color: #0a0a0a;
-    font-size: 20px;
+    font-size: 27px;
     line-height: 1.5em;
 }
 
 header[role="banner"] {
     background: url('../img/banner.jpg') left center no-repeat;
+    @include headline-font;
     background-size: cover;
     height: 50vh;
     text-align: center;
@@ -16,9 +18,8 @@ header[role="banner"] {
 }
 
 nav[role="navigation"] {
-    position: absolute;
-    right: 10px;
-    top: 10px;
+right: 10px;
+top: 10px;
 }
 
 .main-about-text {
@@ -39,6 +40,17 @@ list-style: none;
 padding: 5px 15px 5px 15px;
 }
 
+.menu ul li {
+list-style: none;
+padding: 5px 30px 5px 15px;
+display: inline-block;
+align-content: center;
+}
+
+.menu ul {
+margin-left: 20px;
+}
+
 nav {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -46,51 +58,109 @@ nav {
     text-align: center;
     }
 
-
-.imgWrap {
-  position: relative;
-  height: 100%;
-  width: 100%;
+a:link {
+    text-decoration: none;
 }
 
-.imgDescription {
-  position: absolute;
-  background: rgba(46, 46, 46, 0.75);
+a:link{
   color: #fff;
-  visibility: hidden;
+}
+a:visited{
+  color: #fff;
+}
+a:hover{
+  color: #fff;
+}
+a:focus{
+  color: #fff;
+}
+a:active{
+  color: #fff;
 }
 
-.imgWrap:hover .imgDescription {
-  visibility: visible;
-  opacity: 1;
+div {
+  width: 33%;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+figure {
+  position: relative;
+    text-align: center;
+}
+
+figcaption {
+  background-color: rgba(0, 0, 0, 0);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+  transition: background-color 300ms linear;
+}
+
+figcaption:hover {
+  background-color: rgba(0, 0, 0, .5);
+}
+
+figcaption p {
+  @include body-font;
+  color: rgba(255, 255, 255, 0);
+  font-size: .75em;
+  line-height: 1.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: color 300ms linear;
+  z-index: 100;
+}
+
+figcaption:hover p {
+  color: rgba(255, 255, 255, 1);
+}
+
+
+.desceiption {
+color: #fff;
+margin-left: 100px;
 }
 
 p {
 color: #fff;
-margin-left: 100px;
 }
 
-p img {
-    height: 200px;
-    width: 200px;
-    margin: 50px 10px 0 40px;
-}
 
 h1 {
 color: #fff;
-margin-left: 100px;
 }
 
 h2 {
 color: #fff;
-margin-left: 100px;
 }
 
 footer {
-    background-color: #2b2b2b;
     color: #fff;
     text-align: center;
     font-size: 15px;
     line-height: 1em;
     padding-top: -20px;
+}
+
+.contact-info {
+   background-color: #2b2b2b;
+}
+
+.about-text {
+padding-left: 20px;
+box-sizing: border-box;
+}
+
+
+.outer {
+margin-bottom: 0;
 }
