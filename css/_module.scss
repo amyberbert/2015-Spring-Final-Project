@@ -64,20 +64,20 @@ a:link {
 }
 
 a:link{
-    color: #fff;
+    color: #506c6f;
 }
 a:visited{
-    color: #fff;
+    color: #506c6f;
 }
 a:hover{
-    color: lighten(#626262,20%);
+    color: lighten(#fff,20%);
     transition: color 300ms linear;
 }
 a:focus{
-    color: #fff;
+    color: #506c6f;
 }
 a:active{
-    color: #fff;
+    color: #506c6f;
 }
 
 div {
@@ -193,6 +193,4 @@ margin: 20px 0 0 20px;
     list-style: none;
     line-height: 1.5em;
 }
-
-
 
